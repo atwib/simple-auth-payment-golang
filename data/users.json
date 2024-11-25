@@ -13,5 +13,15 @@
     "user_id": "b62824b2-b00a-4240-b29c-e9d16a4c0e9d",
     "username": "merchant1",
     "password": "$2a$10$xgdMAIu8q5DKknGAFkkEZuWPR9pd8/n4mW2qf4MySWyFKFW2qFLNS"
+  },
+  {
+    "user_id": "c2bcc6c5-43e6-4449-bb57-9529faa60468",
+    "username": "merchant2",
+    "password": "$2a$10$LG0KikDO.2etX1IPy71EaeLFISLHamA1MCB9UBSpwDK2eHot8RYta"
+  },
+  {
+    "user_id": "cd271808-b62d-4227-9180-624a8b8e42a8",
+    "username": "merchant3",
+    "password": "$2a$10$lwDhRML5ydzBS6bxMD9cLuqQlpj6m.Xg40...uLh.W5q/P/uqGvCK"
   }
 ]

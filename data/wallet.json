@@ -18,6 +18,13 @@
     "pin": "$2a$10$CySw9wRAN/G5L5fHP671kOoAhW9/qRzQi22Mcm0UFJaXyAMStJQ4C",
     "user_id": "b62824b2-b00a-4240-b29c-e9d16a4c0e9d",
     "type": "Merchant",
-    "balance": 110000
+    "balance": 150000
+  },
+  {
+    "wallet_id": "3664710b-1889-404b-a147-b3bd24f1a2f2",
+    "pin": "$2a$10$0RfkyC34LuqhvJWBxC8KVOMVe2WGl55GOeQl0E1IdMryPdJwjx5Zm",
+    "user_id": "cd271808-b62d-4227-9180-624a8b8e42a8",
+    "type": "Merchant",
+    "balance": 8000
   }
 ]

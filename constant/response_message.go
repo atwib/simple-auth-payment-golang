@@ -46,4 +46,5 @@ const (
 	SucWalletTopUp           = "Successfully top up"
 	SucWalletTransfer        = "Successfully transfer"
 	SucWalletTransferConfirm = "Are you sure to transfer this amount?"
+	SucWalletWithdraw        = "Successfully withdraw"
 )

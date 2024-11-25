@@ -1,8 +1,6 @@
 package service
 
 import (
-	"errors"
-
 	"net/http"
 	"strconv"
 	"strings"
@@ -221,20 +219,21 @@ func (w *WalletService) Transfer(c *gin.Context, req dto.WalletTransferRequest) 
 	}
 }
 
-func (w *WalletService) WithdrawWallet(walletId string, amount int) (*model.Wallet, error) {
+func (w *WalletService) WithdrawWallet(c *gin.Context, amount int) (int, string, interface{}) {
+	userId := c.GetString("sub")
 	// Get wallet by walletId
-	wallet, err := w.repo.GetWalletByWalletId(walletId)
+	wallet, err := w.repo.GetWalletByUserId(userId)
 	if err != nil {
-		return nil, err
+		return http.StatusNotFound, err.Error(), nil
 	}
 
 	// check if wallet type is Customer or Merchant and Balance - (amount + admin fee) less than min saldo customer or min saldo merchant
 	if wallet.Type == "Customer" && wallet.Balance-amount+constant.AdminFeeCustomerWidraw < constant.MinSaldoCustomer {
-		return nil, errors.New(constant.ErrWalletInsufficientBalance)
+		return http.StatusBadRequest, constant.ErrWalletInsufficientBalance, nil
 	}
 
 	if wallet.Type == "Merchant" && wallet.Balance-amount+constant.AdminFeeMerchantWidraw < constant.MinSaldoMerchant {
-		return nil, errors.New(constant.ErrWalletInsufficientBalance)
+		return http.StatusBadRequest, constant.ErrWalletInsufficientBalance, nil
 	}
 
 	// check if wallet type is Customer then Balance - (amount + admin fee customer widraw)
@@ -246,5 +245,15 @@ func (w *WalletService) WithdrawWallet(walletId string, amount int) (*model.Wall
 		wallet.Balance -= amount + constant.AdminFeeMerchantWidraw
 	}
 
-	return w.repo.UpdateWallet(wallet)
+	UpdatedWallet, err := w.repo.UpdateWallet(wallet)
+	if err != nil {
+		return http.StatusInternalServerError, err.Error(), nil
+	}
+
+	return http.StatusOK, constant.SucWalletWithdraw, dto.WalletRespose{
+		WalletId: UpdatedWallet.WalletId,
+		UserId:   UpdatedWallet.UserId,
+		Type:     UpdatedWallet.Type,
+		Balance:  UpdatedWallet.Balance,
+	}
 }
