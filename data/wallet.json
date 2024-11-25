@@ -1,0 +1,23 @@
+[
+  {
+    "wallet_id": "516a619e-7b6c-43af-8230-c85cfdd1c7ff",
+    "pin": "$2a$10$u23pnsj2.Z5rzVGHQQyJNup8WyUzQSWmd9g8mr/mx30W3nzaRWeRO",
+    "user_id": "f7e481df-406c-474c-b264-d015bc67638c",
+    "type": "Customer",
+    "balance": 0
+  },
+  {
+    "wallet_id": "450f0611-dbb9-4313-9443-e351d00645d4",
+    "pin": "$2a$10$JXEW/qBlXlyCF7LIqEwyfuB7nsDL1FQXEP8PfFS1y.oiA7KxhAaZe",
+    "user_id": "acbbe653-9f49-4257-a32d-ebe54074350c",
+    "type": "Customer",
+    "balance": 38000
+  },
+  {
+    "wallet_id": "82b69506-b3d4-4d8e-b0e1-85972ee8eb9b",
+    "pin": "$2a$10$CySw9wRAN/G5L5fHP671kOoAhW9/qRzQi22Mcm0UFJaXyAMStJQ4C",
+    "user_id": "b62824b2-b00a-4240-b29c-e9d16a4c0e9d",
+    "type": "Merchant",
+    "balance": 110000
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "user_id": "f7e481df-406c-474c-b264-d015bc67638c",
+    "username": "admin",
+    "password": "$2a$10$oxkfioinhaf3RUxdKOE/2e1cHuIBYtriE57j.35l9PqGyqJiSLaVe"
+  },
+  {
+    "user_id": "acbbe653-9f49-4257-a32d-ebe54074350c",
+    "username": "customer1",
+    "password": "$2a$10$G7VSKrSRK7GukYuRmPjQq.Wjm5lj2i1mRedH5dKQBBp5X6SHtBHFC"
+  },
+  {
+    "user_id": "b62824b2-b00a-4240-b29c-e9d16a4c0e9d",
+    "username": "merchant1",
+    "password": "$2a$10$xgdMAIu8q5DKknGAFkkEZuWPR9pd8/n4mW2qf4MySWyFKFW2qFLNS"
+  }
+]
