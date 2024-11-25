@@ -24,9 +24,5 @@ func main() {
 	r.POST("/api/wallet/transfer-confirm", middleware.AuthMiddleware(), walletController.TransferConfirmHandler)
 	r.POST("/api/wallet/top-up", middleware.AuthMiddleware(), walletController.TopUpHandler)
 	r.POST("/api/wallet/withdraw", middleware.AuthMiddleware(), walletController.WithdrawHandler)
-
-	// protected := r.Group("api/auth", middleware.AuthMiddleware())
-	// protected.GET("/me", authController.SelfHandler)
-
 	r.Run(":8080")
 }
